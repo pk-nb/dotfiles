@@ -42,6 +42,7 @@ brew install imagemagick --with-webp
 brew install tree
 brew install ffmpeg --with-libvpx
 brew install terminal-notifier
+brew install trash
 
 # Install common tools
 

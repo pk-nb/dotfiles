@@ -20,6 +20,10 @@ setopt inc_append_history           # always be saving history (not just when th
 # Run in vim mode (press escape)
 bindkey -v
 
+# Setup colors
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
 # z beats cd most of the time. `brew install z`
 zpath="$(brew --prefix)/etc/profile.d/z.sh"
 [ -s $zpath ] && source $zpath
@@ -28,6 +32,10 @@ zpath="$(brew --prefix)/etc/profile.d/z.sh"
 fpath=(/usr/local/share/zsh-completions $fpath)
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Use history search
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
 #---------------------
 # Alias's
 #---------------------
@@ -35,3 +43,4 @@ alias ls='ls -FG'
 alias ll='ls -lh'
 alias be='bundle exec'
 alias dc='docker-compose'
+alias rm='rm -i' # force safe interactive (prefer using trash)

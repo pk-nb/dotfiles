@@ -26,7 +26,6 @@ brew cask install bettertouchtool
 brew cask install carbon-copy-cloner
 brew cask install daisydisk
 
-
 # fun
 brew cask install steam
 brew cask install itch
@@ -36,6 +35,7 @@ brew cask install discord
 # dev
 brew cask install dash
 brew cask install atom
+brew cask install github-desktop
 brew cask install visual-studio-code
 brew cask install licecap
 brew cask install imagealpha
