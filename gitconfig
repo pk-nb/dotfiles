@@ -1,0 +1,11 @@
+[color]
+	ui = true
+[user]
+	name = Nathanael Beisiegel
+	email = pknb.dev@gmail.com
+[core]
+	excludesfile = /Users/NathanaelPro/.gitignore_global
+[push]
+  default = simple
+[branch]
+  autosetuprebase = always
