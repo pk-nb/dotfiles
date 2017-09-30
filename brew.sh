@@ -17,11 +17,11 @@ brew install findutils
 # GNU `sed`, overwriting the built-in `sed`
 brew install gnu-sed --with-default-names
 
-
 # Zsh
 brew install zsh
 brew install zsh-completion
 brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
 
 # Install more recent versions of some OS X tools
 brew install vim --with-override-system-vi
