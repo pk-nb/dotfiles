@@ -13,6 +13,7 @@
         "link": {
             "~/.dotfiles": "",
             "~/.gitconfig": "gitconfig",
+            "~/.gitignore": "gitignore",
             "~/.zshrc": "zshrc"
         }
     },

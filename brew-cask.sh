@@ -10,18 +10,16 @@ brew install caskroom/cask/brew-cask
 brew cask install arq
 brew cask install spectacle
 brew cask install dropbox
-# brew cask install gyazo
 brew cask install 1password
 brew cask install spotify
 brew cask install bettertouchtool
 brew cask install trailer
 brew cask install bartender
 brew cask install screenhero
-brew cask install zoom
 # manually install malware bytes
+# manually install zoom.us
 
 # utils
-
 brew cask install bettertouchtool
 brew cask install carbon-copy-cloner
 brew cask install daisydisk

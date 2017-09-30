@@ -4,7 +4,7 @@
 	name = Nathanael Beisiegel
 	email = pknb.dev@gmail.com
 [core]
-	excludesfile = /Users/NathanaelPro/.gitignore_global
+	excludesfile = /Users/nathanael/.gitignore
 	pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
   default = simple
