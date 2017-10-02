@@ -62,4 +62,4 @@ alias rm='rm -i' # force safe interactive (prefer using trash)
 #---------------------
 
 # Must be last
-# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -33,6 +33,7 @@ brew cask install discord
 # dev
 brew cask install dash
 brew cask install atom
+brew cask install iterm2
 brew cask install github-desktop
 brew cask install visual-studio-code
 brew cask install licecap

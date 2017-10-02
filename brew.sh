@@ -33,6 +33,7 @@ brew install screen
 brew install z
 
 # Install other useful binaries
+brew install tmux
 brew install jq # handy json tool for piping, parsing, etc
 brew install the_silver_searcher # installs ag command
 brew install fzf # fuzzy file search
