@@ -21,9 +21,15 @@ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 # Install dotfiles
 ./dotfile-install
 
+# Install vim plug (https://github.com/junegunn/vim-plug)
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Configure italics via terminfo override (https://sookocheff.com/post/vim/italics/, man tic)
+./italics.sh
+
 # Configure osx
 ./macos.sh
 
 # Prompt for restart
 echo "Lots of config and programs have been added--restart your machine!"
-
