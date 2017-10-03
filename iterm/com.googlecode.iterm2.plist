@@ -378,40 +378,40 @@
 			<key>Text</key>
 			<string>472B8D47-5CF6-462D-A867-A52CF4A5E7B4</string>
 		</dict>
-		<key>0x64-0x40000</key>
-		<dict>
-			<key>Action</key>
-			<integer>29</integer>
-			<key>Text</key>
-			<string>472B8D47-5CF6-462D-A867-A52CF4A5E7B4</string>
-		</dict>
-		<key>0x68-0x40000</key>
+		<key>0x48-0x60000</key>
 		<dict>
 			<key>Action</key>
 			<integer>18</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x6a-0x40000</key>
+		<key>0x4a-0x60000</key>
 		<dict>
 			<key>Action</key>
-			<integer>21</integer>
+			<integer>56</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x6b-0x40000</key>
+		<key>0x4b-0x60000</key>
 		<dict>
 			<key>Action</key>
-			<integer>20</integer>
+			<integer>55</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
-		<key>0x6c-0x40000</key>
+		<key>0x4c-0x60000</key>
 		<dict>
 			<key>Action</key>
 			<integer>19</integer>
 			<key>Text</key>
 			<string></string>
+		</dict>
+		<key>0x64-0x40000</key>
+		<dict>
+			<key>Action</key>
+			<integer>29</integer>
+			<key>Text</key>
+			<string>472B8D47-5CF6-462D-A867-A52CF4A5E7B4</string>
 		</dict>
 		<key>0x9-0x40000</key>
 		<dict>
@@ -558,13 +558,17 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>722 275 658 217 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>710 110 796 473 0 0 1680 1027 </string>
+	<string>3326 209 796 473 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>2 297 650 525 0 0 1680 1027 </string>
+	<string>2619 249 650 525 2560 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>928 93 650 525 0 0 1680 1027 </string>
+	<string>348 88 650 525 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>914 109 650 525 0 0 1680 1027 </string>
+	<string>914 109 650 525 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 3</key>
+	<string>1701 556 650 525 0 0 2560 1417 </string>
+	<key>NSWindow Frame iTerm Window 4</key>
+	<string>275 32 650 525 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2105,7 +2109,7 @@
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>WordCharacters</key>
-	<string>/-+\~_.</string>
+	<string></string>
 	<key>iTerm Version</key>
 	<string>3.1.2</string>
 	<key>kCPFavoritesUserDefaultsKey</key>

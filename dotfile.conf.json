@@ -14,6 +14,7 @@
             "~/.dotfiles": "",
             "~/.gitconfig": "gitconfig",
             "~/.gitignore": "gitignore",
+            "~/.tmux.conf": "tmux.conf",
             "~/.vimrc": "vimrc",
             "~/.vim": "vim",
             "~/.zshrc": "zshrc"

@@ -34,6 +34,7 @@ brew install z
 
 # Install other useful binaries
 brew install tmux
+brew install direnv
 brew install jq # handy json tool for piping, parsing, etc
 brew install the_silver_searcher # installs ag command
 brew install fzf # fuzzy file search
@@ -42,6 +43,11 @@ brew install imagemagick --with-webp
 brew install tree
 brew install ffmpeg --with-libvpx
 brew install terminal-notifier
+
+# Language / dev support
+brew install rbenv # zsh hook is in place--you will need to install a ruby
+brew install nginx
+brew install qt@5.5 # capybara-webkit (remove when not working on rails apps)
 
 # Install common tools
 brew install heroku

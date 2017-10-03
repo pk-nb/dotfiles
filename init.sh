@@ -25,8 +25,14 @@ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Install vim plugins the first time
+vim +PlugInstall +qall
+
 # Configure italics via terminfo override (https://sookocheff.com/post/vim/italics/, man tic)
 ./italics.sh
+
+# Configure nvm
+./nvm.sh
 
 # Configure osx
 ./macos.sh
