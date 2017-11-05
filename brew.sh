@@ -43,6 +43,7 @@ brew install imagemagick --with-webp
 brew install tree
 brew install ffmpeg --with-libvpx
 brew install terminal-notifier
+brew install cmake
 
 # Language / dev support
 brew install rbenv # zsh hook is in place--you will need to install a ruby

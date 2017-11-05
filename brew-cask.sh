@@ -33,6 +33,7 @@ brew cask install discord
 # dev
 brew cask install dash
 brew cask install atom
+brew cask install macvim
 brew cask install iterm2
 brew cask install github-desktop
 brew cask install visual-studio-code
@@ -53,9 +54,8 @@ brew cask install firefox
 brew cask install opera
 
 # fonts
-brew tap caskroom/fonts 
+brew tap caskroom/fonts
 
 brew cask install font-source-code-pro
 brew cask install font-source-code-pro-for-powerline
 brew cask install font-hack
-
