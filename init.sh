@@ -12,7 +12,7 @@ git submodule update --init --recursive
 ./brew.sh
 ./brew-cask.sh
 
-# Install npm globals
+# Install npm globals (including zsh prompt)
 ./npm.sh
 
 # Set zsh as default shell for user
@@ -22,20 +22,24 @@ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 ./dotfile-install
 
 # Install vim plug (https://github.com/junegunn/vim-plug)
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+# https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install vim plugins the first time
-vim +PlugInstall +qall
+# vim +PlugInstall +qall
 
 # Configure italics via terminfo override (https://sookocheff.com/post/vim/italics/, man tic)
-./italics.sh
+# ./italics.sh
 
 # Configure nvm
-./nvm.sh
+# ./nvm.sh
 
 # Configure osx
 ./macos.sh
+
+
+# Install Atom packages
+./atom.sh
 
 # Prompt for restart
 echo "Lots of config and programs have been added--restart your machine!"

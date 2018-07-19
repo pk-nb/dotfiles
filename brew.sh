@@ -23,7 +23,7 @@ brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
 # Install more recent versions of some OS X tools
-brew install vim --with-override-system-vi
+# brew install vim --with-override-system-vi
 brew install nano
 brew install grep
 brew install openssh
@@ -46,9 +46,9 @@ brew install terminal-notifier
 brew install cmake
 
 # Language / dev support
-brew install rbenv # zsh hook is in place--you will need to install a ruby
+# brew install rbenv # zsh hook is in place--you will need to install a ruby
 brew install nginx
-brew install qt@5.5 # capybara-webkit (remove when not working on rails apps)
+# brew install qt@5.5 # capybara-webkit (remove when not working on rails apps)
 
 # Install common tools
 brew install heroku
@@ -57,7 +57,11 @@ brew install heroku
 brew install node # This installs `npm` too using the recommended installation method
 brew install postgres
 brew install postgis
-brew install yarn
+# brew install yarn # installing with npm
+
+# manage node and ruby versions with these shimming tools
+brew install rbenv
+brew install nodenv
 
 # Remove outdated versions from the cellar
 brew cleanup

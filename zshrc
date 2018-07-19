@@ -43,7 +43,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Pure Initialization (installed with npm install -g pure-prompt)
 autoload -U promptinit; promptinit
-PURE_PROMPT_SYMBOL=$
+PURE_PROMPT_SYMBOL=▲
 prompt pure
 
 # Initialize completions scripts on fpath (including homebrew completions in /etc)
@@ -71,47 +71,12 @@ bindkey "^[[B" history-beginning-search-forward
 #--------------------------
 # Path changes and tools
 #-------------------------
+export PATH="/usr/local/sbin:$PATH" # homebrew doesn't add sbin automatically
 eval "$(direnv hook zsh)"
 eval "$(rbenv init -)"
+eval "$(nodenv init -)"
 
-# nvm (using fast init method from https://github.com/creationix/nvm/issues/539#issuecomment-245791291)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This setups nvm to be lazy-loaded
-
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-
-# Alias node, npm, and yarn to access node lazily. We reset the alias on cd to ensure we always use
-# the right nvm version when in a new folder (respecting the nvmrc if possible).
-alias node='unalias node ; unalias npm ; unalias yarn ; export NVM_LOADED_FOR_PATH=1 ; load-nvmrc ; node $@';
-alias npm='unalias node ; unalias npm ; unalias yarn ; export NVM_LOADED_FOR_PATH=1 ; load-nvmrc ; npm $@';
-alias yarn='unalias node ; unalias npm ; unalias yarn ; export NVM_LOADED_FOR_PATH=1 ; load-nvmrc ; yarn $@';
-
-unset_nvm() {
-  if [[ "$NVM_LOADED_FOR_PATH" -eq 1 ]]; then
-    export NVM_LOADED_FOR_PATH=0
-    alias node='unalias node ; unalias npm ; unalias yarn ; export NVM_LOADED_FOR_PATH=1 ; load-nvmrc ; node $@';
-    alias npm='unalias node ; unalias npm ; unalias yarn ; export NVM_LOADED_FOR_PATH=1 ; load-nvmrc ; npm $@';
-    alias yarn='unalias node ; unalias npm ; unalias yarn ; export NVM_LOADED_FOR_PATH=1 ; load-nvmrc ; yarn $@';
-  fi
-}
-
-add-zsh-hook chpwd unset_nvm
+# export PATH="$PATH:/Users/nathanael/NBDeveloper/kapost/kafka/confluent-4.0.0/bin"
 
 # Include binaries for qt5.5 (capybara-webkit)
 # export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
