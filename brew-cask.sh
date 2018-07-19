@@ -15,7 +15,6 @@ brew cask install spotify
 brew cask install bettertouchtool
 brew cask install trailer
 brew cask install bartender
-brew cask install screenhero
 # manually install malware bytes
 # manually install zoom.us
 
@@ -40,11 +39,17 @@ brew cask install visual-studio-code
 brew cask install licecap
 brew cask install imagealpha
 brew cask install imageoptim
+brew cask install popsql
+brew cask install tunnelblick
+brew cask install docker
 
-# design
+# design and creative
 brew cask install blender
-brew cask install sketch
 brew cask install astropad
+brew cask install sketch
+brew cask install magicavoxel
+brew cask install scrivener
+brew cask install aseprite
 
 # browsers
 brew cask install google-chrome
