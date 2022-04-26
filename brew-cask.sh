@@ -4,63 +4,42 @@
 # to maintain cask ....
 #     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup`
 
-brew install caskroom/cask/brew-cask
+# brew install caskroom/cask/brew-cask
 
 # daily
-brew cask install arq
-brew cask install spectacle
-brew cask install dropbox
-brew cask install 1password
-brew cask install spotify
-brew cask install bettertouchtool
-brew cask install trailer
-brew cask install bartender
-# manually install malware bytes
-# manually install zoom.us
+brew install --cask arq
+brew install --cask rectangle
+brew install --cask 1password
+brew install --cask spotify
+brew install --cask trailer
+# brew install --cask bartender # setapp
+brew install --cask zoom
 
 # utils
-brew cask install bettertouchtool
-brew cask install carbon-copy-cloner
-brew cask install daisydisk
+brew install --cask bettertouchtool
+brew install --cask carbon-copy-cloner
+brew install --cask daisydisk
 
 # fun
-brew cask install steam
-brew cask install itch
-brew cask install openemu
-brew cask install discord
+brew install --cask itch
+brew install --cask openemu
+brew install --cask discord
 
 # dev
-brew cask install dash
-brew cask install atom
-brew cask install macvim
-brew cask install iterm2
-brew cask install github-desktop
-brew cask install visual-studio-code
-brew cask install licecap
-brew cask install imagealpha
-brew cask install imageoptim
-brew cask install popsql
-brew cask install tunnelblick
-brew cask install docker
+brew install --cask visual-studio-code
+brew install --cask iterm2
+brew install --cask dash
+brew install --cask github-desktop
+brew install --cask docker
+brew install --cask setapp
 
 # design and creative
-brew cask install blender
-brew cask install astropad
-brew cask install sketch
-brew cask install magicavoxel
-brew cask install scrivener
-brew cask install aseprite
+brew install --cask blender
+brew install --cask figma
+brew install --cask sketch
+brew install --cask magicavoxel
+brew install --cask scrivener
 
 # browsers
-brew cask install google-chrome
-# manually install chrome canary
-brew cask install firefox
+brew install --cask firefox
 # manually install firefox developer edition
-brew cask install opera
-
-# fonts
-brew tap caskroom/fonts
-
-# brew cask install font-source-code-pro
-# brew cask install font-source-code-pro-for-powerline
-# brew cask install font-hack

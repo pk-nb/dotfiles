@@ -1,6 +1,7 @@
 #-------------------------
 # Shell Config
 #-------------------------
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Set editor
 export EDITOR=vim
@@ -42,12 +43,18 @@ export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
 # Pure Initialization (installed with npm install -g pure-prompt)
-autoload -U promptinit; promptinit
 PURE_PROMPT_SYMBOL=▲
+autoload -U promptinit; promptinit
 prompt pure
 
 # Initialize completions scripts on fpath (including homebrew completions in /etc)
 # Lazy load the ~/.zcompdump check
+# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
   compinit
@@ -59,10 +66,23 @@ fi
 zpath="$(brew --prefix)/etc/profile.d/z.sh"
 [ -s $zpath ] && source $zpath
 
-# Install completions and autosuggest
-fpath=(/usr/local/share/zsh-completions $fpath)
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Install zsh-completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# Install zsh-autosuggestions
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+# Install zsh-vi-mode
+source /opt/homebrew/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+# If using zsh mode, history search has to be initialized after plugin loads lazily
+zvm_after_init_commands+=("bindkey '^[[A' history-beginning-search-backward" "bindkey '^[[B' history-beginning-search-forward")
+
 
 # Use history search
 bindkey "^[[A" history-beginning-search-backward
@@ -71,29 +91,27 @@ bindkey "^[[B" history-beginning-search-forward
 #--------------------------
 # Path changes and tools
 #-------------------------
-export PATH="/usr/local/sbin:$PATH" # homebrew doesn't add sbin automatically
-eval "$(direnv hook zsh)"
-eval "$(rbenv init -)"
-eval "$(nodenv init -)"
-
-# export PATH="$PATH:/Users/nathanael/NBDeveloper/kapost/kafka/confluent-4.0.0/bin"
-
-# Include binaries for qt5.5 (capybara-webkit)
-# export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
+# Init asdf for version management
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 #-------------------------
 # Alias's
 #-------------------------
 alias ls='ls -FG'
 alias ll='ls -lh'
+alias ex='exa --icons'
+alias el='exa -l --icons --git'
+alias et='exa --tree --icons'
 alias be='bundle exec'
 alias dc='docker-compose'
+alias dcr='dc run --rm'
+alias dce='docker-compose exec'
 alias rm='rm -i' # force safe interactive (prefer using trash)
-# alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias gitclean='git checkout master && git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 #-------------------------
 # Highlighting
 #-------------------------
 
 # Must be last
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

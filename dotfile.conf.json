@@ -14,7 +14,6 @@
             "~/.dotfiles": "",
             "~/.gitconfig": "gitconfig",
             "~/.gitignore": "gitignore",
-            "~/.tmux.conf": "tmux.conf",
             "~/.zshrc": "zshrc"
         }
     },

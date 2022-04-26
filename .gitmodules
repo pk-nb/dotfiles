@@ -1,6 +1,3 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
-[submodule "atom-one-dark-terminal"]
-	path = atom-one-dark-terminal
-	url = https://github.com/nathanbuchar/atom-one-dark-terminal.git
